@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import { rgbToHex } from './utils/utils'
 import ShadowEditor from './pages/ShadowEditor'
 import MacOS from './components/MacOS';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     }} className="App">
       <Home/>
       <MacOS/>
+      <Analytics />
     </div>
   )
 }
