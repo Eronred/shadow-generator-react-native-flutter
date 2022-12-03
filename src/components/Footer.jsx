@@ -1,7 +1,14 @@
 import React from 'react'
+import Link from './Link';
 
 export default function Footer() {
     return (
-        <div>Footer</div>
+        <div>
+            Build by
+            <Link
+                url=""
+                label="Eren"
+            />
+        </div>
     )
 }

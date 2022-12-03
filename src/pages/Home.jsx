@@ -8,9 +8,10 @@ import useClose from '../hooks/useClose';
 import NavBar from '../components/NavBar';
 import { flexColumnCentered, flexRowCentered } from '../styles/style';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 
 export default function Home() {
-  
+
   const [color, setColor] = useState({ r: 0, g: 0, b: 0, a: 0.08 })
   const [shadowOffsetWidth, setShadowOffsetWidth] = useState(0)
   const { r, g, b, a } = color;
@@ -168,6 +169,7 @@ export default function Home() {
         <h1>React Native Shadow Builder!</h1>
         <p>Mob tools is a browser based design tool that codes React Native, Flutter and Swift for you</p>
       </div> */}
+     
     </div>
   )
 }

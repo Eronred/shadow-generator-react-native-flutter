@@ -5,10 +5,10 @@ export default function Link(
 ) {
     return (
         <a style={{
-            textDecoration:'none',
-            color:'gray',
-            fontSize:18
+            textDecoration: 'none',
+            color: '#333333',
+            fontSize: 18
 
-        }} href={url} _blank >{label}</a>
+        }} href={url} target='_blank' >{label}</a>
     )
 }
