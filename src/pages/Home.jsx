@@ -10,6 +10,7 @@ import { flexColumnCentered, flexRowCentered } from '../styles/style';
 import Banner from '../components/Banner';
 
 export default function Home() {
+  
   const [color, setColor] = useState({ r: 0, g: 0, b: 0, a: 0.08 })
   const [shadowOffsetWidth, setShadowOffsetWidth] = useState(0)
   const { r, g, b, a } = color;

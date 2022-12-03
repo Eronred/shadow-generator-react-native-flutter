@@ -15,7 +15,7 @@ export const flexRowCentered = {
 export const flexRowSpaceBetween = {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     flexDirection: 'row'
 }
 

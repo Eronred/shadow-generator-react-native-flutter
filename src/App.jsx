@@ -1,21 +1,13 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import Slider from './components/Slider'
-import { SketchPicker } from 'react-color'
-import { RgbaColorPicker } from "react-colorful";
-import { rgba } from 'polished'
 import Home from './pages/Home'
-import { rgbToHex } from './utils/utils'
-import ShadowEditor from './pages/ShadowEditor'
 import MacOS from './components/MacOS';
 import { Analytics } from '@vercel/analytics/react';
-
 
 function App() {
 
   return (
-    <div style={{
+    <div 
+    style={{
       display:'flex',
       alignItems:'center',
       justifyContent:'center',

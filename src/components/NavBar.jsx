@@ -2,6 +2,7 @@ import React from 'react'
 import Link from './Link';
 import logo from '../assets/logo.svg';
 import '../pages/Home.css'
+import BuyMeCoffee from './BuyMeCoffee';
 
 export default function NavBar() {
 
@@ -48,6 +49,7 @@ export default function NavBar() {
                             />
                         )
                     })}
+                    <BuyMeCoffee/>
                 </ul>
             </nav>
         </>
