@@ -1,0 +1,58 @@
+.button {
+  pointer: cursor;
+  padding: 14px 20px;
+  background-color: #18a0fb;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  transition: all ease 500ms;
+  outline: none;
+  margin-top: 40px;
+  border: none;
+}
+
+.button:hover {
+  background: #18a8fb;
+  transition: all ease 100ms;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.button:active {
+  outline: none;
+  transform: translateY(4px);
+}
+
+.button-copy {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  pointer: cursor;
+  padding: 9px 18px;
+  background-color: #2f80ed;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  transition: all ease 500ms;
+  outline: none;
+  margin-top: 40px;
+  border: none;
+  position: absolute;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  bottom: 24px;
+  right: 12px;
+}
+
+.button-copy:hover {
+  background: #18a8fb;
+  transition: all ease 100ms;
+}
+
+.button-copy:active {
+  transform: translateY(4px);
+}

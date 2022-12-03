@@ -1,0 +1,73 @@
+.macOS__container {
+  background-image: url("../assets/macOS_bg.png");
+  width: 95%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px;
+  margin-bottom: 100px;
+  border-radius: 40px;
+  box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.25);
+}
+
+.macOS__container .window__container {
+  padding: 14px;
+  width: 100%;
+}
+
+.macOS__container .dock__container {
+  height: 70px;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  /* position: sticky;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); */
+  transition: all ease 0.6s;
+  background: linear-gradient(
+    129.48deg,
+    rgba(255, 255, 255, 0.078) 1.91%,
+    rgba(255, 255, 255, 0.426) 68.31%
+  );
+  mix-blend-mode: normal;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(31.2836px);
+}
+
+.macOS__container .dock__container .dock__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  list-style-type: none;
+}
+
+/* .macOS__container .dock__container .dock__wrapper::after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  content: "";
+  bottom: 2px;
+} */
+
+.macOS__container .dock__container .dock__wrapper li {
+  transition: cubic-bezier(0.03, 0.84, 0.12, 1.52) 0.6s;
+}
+
+.macOS__container .dock__container .dock__wrapper li:hover {
+  margin: 0px 13px 22px 13px;
+  -webkit-animation: all 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: all 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: scale(1.2);
+  z-index: 2;
+}
