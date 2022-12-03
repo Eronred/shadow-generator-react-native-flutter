@@ -41,7 +41,7 @@ div nav ul {
   text-align: center;
   font-weight: 800;
   line-height: 109.8%;
-  margin-top:12px;
+  margin-top: 12px;
 }
 .header__container p {
   font-size: 24px;
@@ -50,6 +50,29 @@ div nav ul {
   line-height: 146%;
   text-align: center;
 }
+
+.header__container p span {
+  padding: 6px;
+  background: #000;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  font-weight:600
+}
+
+.header__container p .react {
+  background: linear-gradient(113.77deg, #61dafb 11.42%, #01b6e8 65.29%);
+  color: #fff;
+}
+.header__container p .flutter {
+  background: linear-gradient(263.25deg, #45D1FD 8.43%, #24B4EF 74.42%);  color: #fff;
+}
+.header__container p .swift {
+  background: linear-gradient(189.99deg, #faae42 3.05%, #ef3e31 96.98%);
+  color: #fff;
+}
+
+
 
 .header__container .languages__wrapper {
   display: flex;

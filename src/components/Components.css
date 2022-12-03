@@ -25,7 +25,6 @@
 }
 
 .button-copy {
-  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +43,7 @@
   position: absolute;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  bottom: 24px;
+  bottom: 16px;
   right: 12px;
 }
 

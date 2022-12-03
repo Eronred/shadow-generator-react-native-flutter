@@ -4,6 +4,7 @@ import '../pages/home.css'
 export default function Slider({
     label,
     direction,
+    width,
     contentCenter: alignedItems,
     min,
     max,
@@ -28,7 +29,7 @@ export default function Slider({
                 {valueLabel && <strong>{valueLabel}</strong>}
             </div>
             <input style={{
-                maxWidth: 240
+                width: width || 200
             }}
                 type='range'
                 min={min}

@@ -86,7 +86,7 @@
 .editor__container .code__bar .tab__bar .flutter::after {
   content: "Soon";
   padding: 4px;
-  border-radius: 4px;
+  border-radius: 8px;
   background: #46d1fd;
   color: #fff;
   font-size:14px;
@@ -97,14 +97,12 @@
 .editor__container .code__bar .tab__bar .swift::after {
   content: "Soon";
   padding: 4px;
-  border-radius: 4px;
+  border-radius: 8px;
   background: linear-gradient(189.99deg, #faae42 3.05%, #ef3e31 96.98%);
   color: #fff;
   font-size:14px;
   margin-left:4px;
   font-weight:500
-
-
 }
 
 .editor__container .code__bar .tab__bar .tab:hover {
