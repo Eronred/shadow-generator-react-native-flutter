@@ -1,5 +1,5 @@
 import React from 'react'
-import '../pages/home.css'
+import '../pages/Home.css'
 
 export default function Slider({
     label,
