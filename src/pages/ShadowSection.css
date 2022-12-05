@@ -1,0 +1,214 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 220px;
+}
+
+.header__container h1 {
+  font-size: 48px;
+  max-width: 700px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 109.8%;
+  margin-top: 12px;
+}
+.header__container p {
+  font-size: 24px;
+  max-width: 600px;
+  margin-top: 20px;
+  line-height: 146%;
+  text-align: center;
+}
+
+.shadows__section .input__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.header__container .input__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.header__container .input__wrapper .card__span {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.header__container .input__wrapper .ui__span {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.header__container .input__wrapper .switch {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  --width-of-switch: 4em;
+  --height-of-switch: 3em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.2em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+.header__container .input__wrapper .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.header__container .input__wrapper .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f4f4f5;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 50px;
+  border: 2px solid #cfcfcf;
+}
+
+.header__container .input__wrapper .slider::before {
+  position: absolute;
+  content: "";
+  height: 1.8em;
+  width: 1.8em;
+  border-radius: 20px;
+  left: var(--slider-offset, 1.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2c2c2c;
+  transition: 0.2s;
+  border: solid 2px #4e4e4e;
+}
+
+.header__container .input__wrapper .switch input:checked + .slider:before {
+  left: calc(80% - (var(--size-of-icon, 5.1em) + var(--slider-offset, 2em)));
+  background: linear-gradient(135.85deg, #5acbfc 16.7%, #11b5fb 79.68%);
+  border: 2px solid #fff;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+}
+.header__container .input__wrapper .switch input:checked + .slider {
+  background: #99e0ff;
+  border: 2px solid rgba(51, 192, 252, 0.16);
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+}
+
+.card {
+  box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.2);
+}
+
+.card-xs {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+.card-sm {
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1);
+}
+
+.card-md {
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+}
+.card-lg {
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1);
+}
+.card-xl {
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+}
+.card-2xl {
+  box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.25);
+}
+
+.header__container .element__wrapper {
+  margin-top: 42px;
+  display: grid;
+  max-width: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  place-items: center;
+  justify-content: center;
+}
+
+.widget__container {
+  --width-of-card: 180px;
+
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 24px 12px;
+  border-radius: 12px;
+  min-width: var(--width-of-card);
+  max-height: var(--width-of-card);
+  overflow: hidden;
+}
+
+
+
+.widget__container .date__wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.widget__container .date__wrapper span {
+  color: #ee5c51;
+  font-weight: 600;
+  font-size: 17px;
+}
+.widget__container .date__wrapper h2 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+.widget__container .event__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.widget__container .event__wrapper .divider {
+  width: 4px;
+  background: #b54896;
+  border-radius: 3px;
+  height: 50px;
+}
+
+.widget__container .event__wrapper .event__detail {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.widget__container .event__wrapper .event__detail h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 680px) {
+    .header__container .element__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+}

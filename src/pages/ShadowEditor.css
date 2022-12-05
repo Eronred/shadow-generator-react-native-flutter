@@ -1,7 +1,7 @@
 .editor__container {
   min-height: 650px;
   align-items: center;
-  min-width: 700px;
+  min-width: 630px;
   display: flex;
   justify-content: center;
   background: #ffffff;
@@ -63,7 +63,7 @@
 .editor__container .code__bar {
   min-height: inherit;
   flex-grow: 2;
-  min-width: 420px;
+  min-width: 320px;
   background: #16171d;
   position: relative;
 }
@@ -89,9 +89,9 @@
   border-radius: 8px;
   background: #46d1fd;
   color: #fff;
-  font-size:14px;
-  margin-left:4px;
-  font-weight:500
+  font-size: 14px;
+  margin-left: 4px;
+  font-weight: 500;
 }
 
 .editor__container .code__bar .tab__bar .swift::after {
@@ -100,9 +100,9 @@
   border-radius: 8px;
   background: linear-gradient(189.99deg, #faae42 3.05%, #ef3e31 96.98%);
   color: #fff;
-  font-size:14px;
-  margin-left:4px;
-  font-weight:500
+  font-size: 14px;
+  margin-left: 4px;
+  font-weight: 500;
 }
 
 .editor__container .code__bar .tab__bar .tab:hover {

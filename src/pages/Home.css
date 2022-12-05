@@ -36,8 +36,8 @@ div nav ul {
 }
 
 .header__container h1 {
-  font-size: 70px;
-  max-width: 600px;
+  font-size: 65px;
+  max-width: 700px;
   text-align: center;
   font-weight: 800;
   line-height: 109.8%;
@@ -52,12 +52,13 @@ div nav ul {
 }
 
 .header__container p span {
-  padding: 6px;
+  padding: 4px;
   background: #000;
   text-align: center;
   color: #fff;
-  border-radius: 8px;
-  font-weight:600
+  border-radius: 12px;
+  font-weight: 600;
+  border: solid 1px #fff;
 }
 
 .header__container p .react {
@@ -65,14 +66,13 @@ div nav ul {
   color: #fff;
 }
 .header__container p .flutter {
-  background: linear-gradient(263.25deg, #45D1FD 8.43%, #24B4EF 74.42%);  color: #fff;
+  background: linear-gradient(263.25deg, #45d1fd 8.43%, #24b4ef 74.42%);
+  color: #fff;
 }
 .header__container p .swift {
   background: linear-gradient(189.99deg, #faae42 3.05%, #ef3e31 96.98%);
   color: #fff;
 }
-
-
 
 .header__container .languages__wrapper {
   display: flex;
@@ -202,4 +202,7 @@ div nav ul {
   to {
     filter: hue-rotate(1turn);
   }
+}
+
+@media only screen and (max-width: 600px) {
 }

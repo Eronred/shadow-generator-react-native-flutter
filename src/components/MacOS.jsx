@@ -16,12 +16,12 @@ export default function MacOS() {
         {
             name: 'Shadow',
             logo: logo,
-            url: 'aa'
+            url: '/'
         },
         {
             name: 'Dribbble',
             logo: Dribbble,
-            url: 'aa'
+            url: 'https://dribbble.com/imeron'
         },
         {
             name: 'Twitter',
@@ -31,28 +31,28 @@ export default function MacOS() {
         {
             name: 'Github',
             logo: Github,
-            url: 'aa'
+            url: 'https://github.com/Eronred'
         },
         {
             name: 'Figma',
             logo: Figma,
-            url: 'aa'
-        }, 
+            url: 'https://www.figma.com/@eren'
+        },
         {
             name: 'LinkedIn',
             logo: LinkedIn,
-            url: 'https://twitter.com/imeronn'
+            url: 'https://www.linkedin.com/in/eronred/'
         },
         {
             name: 'Instagram',
             logo: Instagram,
-            url: 'https://twitter.com/imeronn'
+            url: 'https://www.instagram.com/eronred/'
         },
         {
             name: 'Eronred',
             logo: eron,
             url: 'aa'
-        }, 
+        },
 
     ]
 
@@ -63,13 +63,12 @@ export default function MacOS() {
             </div>
             <div className='dock__container'>
                 <ul className='dock__wrapper'>
-
                     {
                         apps.map((app, index) => {
                             return (
                                 <li>
                                     <a
-                                        _blank
+                                        target='_blank'
                                         key={index}
                                         href={app.url}>
                                         <img style={{
