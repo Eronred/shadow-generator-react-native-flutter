@@ -17,7 +17,7 @@ export default function Home() {
   const { r, g, b, a } = color;
   const SIZE = 60;
   const { ref, isComponentOpen, setIsComponentOpen } = useClose(false)
-  const matches = useMediaQuery('(min-width:970px)');
+  const matches = useMediaQuery('(min-width:1170px)');
 
   return (
     <div style={flexColumnCentered}>

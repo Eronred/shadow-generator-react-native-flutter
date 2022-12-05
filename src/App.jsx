@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Footer from './components/Footer';
 import { useMediaQuery, useMediaQueries } from '@react-hook/media-query'
 import ShadowsSection from './pages/ShadowsSection';
+import Popup from './components/Popup';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       }} className="App">
       <Home />
       <ShadowsSection/>
-      {matches ? <MacOS /> : <h1>Your screen size should be min 400</h1>}
+      {matches ? <MacOS /> : <Popup/>}
 
       <Footer />
       <Analytics />
