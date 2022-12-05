@@ -13,8 +13,8 @@ nav {
   position: fixed;
   top: 40px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8.5px);
   z-index: 10;
+  backdrop-filter: blur(9.5px);
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 

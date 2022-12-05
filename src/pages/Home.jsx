@@ -85,9 +85,11 @@ export default function Home() {
           </svg>
         </div>
         <div style={{
-          fontSize:18
+          fontSize: 18
         }} className='banner'>React Native UI kit coming soon! </div>
-        <h1>React Native Shadow Generator!</h1>
+        <h1 style={{
+          fontSize: 68
+        }}>React Native Shadow Generator!</h1>
         <p>The easiest way to generate shadows for <br></br><span className='react'>React Native</span>, <span className='flutter'>Flutter</span> and <span className='swift'>Swift</span></p>
         {matches && <div>
           <svg className='mobile__card' width="308" height="178" viewBox="0 0 308 178" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +168,9 @@ export default function Home() {
             }
           </div>
         </div>
-        <Button label="Shadow Generator" />
+        <a href='#editor'>
+          <Button label="Shadow Generator" />
+        </a>
       </div>
       {/* <div className='shadow-guide-container'>
         <h1>React Native Shadow Builder!</h1>

@@ -57,7 +57,7 @@ export default function MacOS() {
     ]
 
     return (
-        <div className='macOS__container'>
+        <div id='editor' className='macOS__container'>
             <div className='window__container'>
                 <ShadowEditor />
             </div>
