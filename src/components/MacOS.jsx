@@ -51,7 +51,7 @@ export default function MacOS() {
         {
             name: 'Eronred',
             logo: eron,
-            url: 'aa'
+            url: 'https://read.cv/erencan'
         },
 
     ]
