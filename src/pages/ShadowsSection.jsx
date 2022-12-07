@@ -49,7 +49,10 @@ export default function ShadowsSection() {
                     color: isCard ? '#828282' : '#000',
                 }} className='card__span'>Card</span>
                 <label class="switch">
-                    <input type='checkbox' value={isCard} onChange={() => setIsCard(!isCard)} />
+                    <input
+                        type='checkbox'
+                        value={isCard}
+                        onChange={() => setIsCard(!isCard)} />
                     <span class="slider"></span>
                 </label>
                 <span style={{
