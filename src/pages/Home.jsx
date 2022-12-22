@@ -9,6 +9,7 @@ import NavBar from '../components/NavBar';
 import { flexColumnCentered, flexRowCentered } from '../styles/style';
 import Banner from '../components/Banner';
 import { useMediaQuery } from '@react-hook/media-query'
+import { useCopyToClipboard } from 'use-copy-clipboard-hook';
 
 export default function Home() {
 
@@ -17,8 +18,10 @@ export default function Home() {
   const { r, g, b, a } = color;
   const SIZE = 60;
   const { ref, isComponentOpen, setIsComponentOpen } = useClose(false)
-  const matches = useMediaQuery('(min-width:1170px)');
 
+  const [copied, copyToClipboard] = useCopyToClipboard();
+
+  const matches = useMediaQuery('(min-width:1170px)');
   return (
     <div style={flexColumnCentered}>
       <Banner
@@ -26,6 +29,10 @@ export default function Home() {
       />
       <NavBar />
       <div className='header__container'>
+        <div onClick={() => copyToClipboard("ereasrere", 2000)}>
+          {copied ? "copied" : "copy text"}
+        </div>
+
         <div className='languages__wrapper'>
           <svg width={SIZE} height={SIZE} viewBox="0 0 82 81" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.100098" width="81" height="81" rx="40.5" fill="white" />
@@ -172,11 +179,7 @@ export default function Home() {
           <Button label="Shadow Generator" />
         </a>
       </div>
-      {/* <div className='shadow-guide-container'>
-        <h1>React Native Shadow Builder!</h1>
-        <p>Mob tools is a browser based design tool that codes React Native, Flutter and Swift for you</p>
-      </div> */
-      }
+
 
     </div>
   )

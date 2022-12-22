@@ -104,10 +104,3 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
