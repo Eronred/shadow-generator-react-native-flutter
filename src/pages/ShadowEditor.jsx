@@ -13,17 +13,17 @@ const ShadowEditor = () => {
     const [shadowOffsetHeight, setShadowOffsetHeight] = useState(11)
     const [shadowOpacity, setShadowOpacity] = useState(0.25)
     const [shadowRadius, setShadowRadius] = useState(21)
-    const [isValid, setIsValid] = useState(false)
-    const [typedColor, setTypedColor] = useState('')
     const { r, g, b, a } = shadowColor;
     const [isCopied, setCopied] = useState(false);
+
+
 
     const shadowCode =
         `
         shadowColor:${rgbToHex(r, g, b)},
         shadowOffset: {
-          width: ${shadowOffsetWidth},
-          height: ${shadowOffsetHeight},
+            width: ${shadowOffsetWidth},
+            height: ${shadowOffsetHeight},
         },
         shadowOpacity: ${shadowOpacity},
         shadowRadius: ${shadowRadius},
@@ -149,7 +149,7 @@ const ShadowEditor = () => {
                                     flexDirection: 'row',
                                     gap: 4,
                                 }}>
-                                {/*<div
+                                    {/*<div
                                         style={{
                                             width: 25,
                                             height: 25,
