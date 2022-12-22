@@ -29,9 +29,6 @@ export default function Home() {
       />
       <NavBar />
       <div className='header__container'>
-        <div onClick={() => copyToClipboard("ereasrere", 2000)}>
-          {copied ? "copied" : "copy text"}
-        </div>
 
         <div className='languages__wrapper'>
           <svg width={SIZE} height={SIZE} viewBox="0 0 82 81" fill="none" xmlns="http://www.w3.org/2000/svg">
