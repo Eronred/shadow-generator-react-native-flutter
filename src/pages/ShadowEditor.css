@@ -30,6 +30,13 @@
   font-size: 20px;
   color: #888888;
 }
+.editor__container .sidebar .component__picker .component__select {
+  padding: 6px;
+  border-radius:8px;
+  color:white;
+  background:#3f3c3c;
+  margin-top:12px;
+}
 
 .editor__container .sidebar .slider__container {
   height: 100%;
@@ -40,7 +47,6 @@
 }
 
 .editor__container .sidebar .color__container {
-  margin-top: 34px;
 }
 
 .editor__container

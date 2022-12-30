@@ -15,6 +15,7 @@ const ShadowEditor = () => {
     const [shadowRadius, setShadowRadius] = useState(21)
     const { r, g, b, a } = shadowColor;
     const [isCopied, setCopied] = useState(false);
+    const [selectValue, setSelectValue] = useState("");
 
     const shadowCode =
         `
@@ -88,8 +89,15 @@ const ShadowEditor = () => {
             <div className="editor__container">
                 <div className="sidebar">
                     <div className='component__picker'>
-                        <select>
-
+                        <h4>Component Menu</h4>
+                        <select
+                            onChange={(e) => setSelectValue(e.target.value)}
+                            className='component__select'
+                            name="components"
+                            id="components">
+                            <option value="button">Button</option>
+                            <option value="card">Card View</option>
+                            <option value="profile">Profile Image</option>
                         </select>
                     </div>
                     <div className="slider__container">
@@ -268,13 +276,14 @@ const ShadowEditor = () => {
                 <div className='ios__screen'>
                     <div className='screen__top'></div>
                     <div className='content'>
-                        <button style={{
+
+                        {selectValue === "button" ? <button style={{
                             boxShadow:
                                 `${shadowOffsetWidth}px 
                                 ${shadowOffsetHeight}px 
                                 ${shadowRadius}px 
                                 ${rgba(shadowColor.r, shadowColor.g, shadowColor.b, shadowColor.a)}`,
-                        }}>Get Started</button>
+                        }}>Get Started</button> : <div>test</div>}
                     </div>
                 </div>
             </div>
