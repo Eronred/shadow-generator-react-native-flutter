@@ -16,8 +16,6 @@ const ShadowEditor = () => {
     const { r, g, b, a } = shadowColor;
     const [isCopied, setCopied] = useState(false);
 
-
-
     const shadowCode =
         `
         shadowColor:${rgbToHex(r, g, b)},
@@ -89,6 +87,11 @@ const ShadowEditor = () => {
         <div style={flexRowSpaceBetween}>
             <div className="editor__container">
                 <div className="sidebar">
+                    <div className='component__picker'>
+                        <select>
+
+                        </select>
+                    </div>
                     <div className="slider__container">
                         <h4>Shadow Controller</h4>
                         <div style={{
@@ -149,30 +152,6 @@ const ShadowEditor = () => {
                                     flexDirection: 'row',
                                     gap: 4,
                                 }}>
-                                    {/*<div
-                                        style={{
-                                            width: 25,
-                                            height: 25,
-                                            borderRadius: '100%',
-                                            background: rgba(r, g, b, a),
-                                            border: `solid 2px #F0F0F0`
-                                        }}>
-                                    </div>
-                                     <input
-                                        style={{
-                                            background: '#F0F0F0',
-                                            borderRadius: 6,
-                                            border: 'none',
-                                            width: 90,
-                                            padding: 6
-                                        }}
-                                        placeholder='Hex Color'
-                                        type='text'
-                                        value={typedColor}
-                                        onChange={(e) => setTypedColor(e.target.value)}
-                                    />
-                                    {isValid ? <span>Invalid Color!</span> : ""} 
-                                */}
                                 </div>
                                 <div
                                     className='color__card__container'
