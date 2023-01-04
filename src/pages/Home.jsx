@@ -1,15 +1,11 @@
 import React, { useState, useRef } from 'react'
-import Slider from '../components/Slider'
 import './Home.css'
 import { RgbaColorPicker } from "react-colorful";
 import { rgba } from 'polished'
-import Button from '../components/Button';
+import { Button, NavBar, Slider, Banner } from './index'
 import useClose from '../hooks/useClose';
-import NavBar from '../components/NavBar';
 import { flexColumnCentered, flexRowCentered } from '../styles/style';
-import Banner from '../components/Banner';
 import { useMediaQuery } from '@react-hook/media-query'
-import { useCopyToClipboard } from 'use-copy-clipboard-hook';
 
 export default function Home() {
 
@@ -18,8 +14,6 @@ export default function Home() {
   const { r, g, b, a } = color;
   const SIZE = 60;
   const { ref, isComponentOpen, setIsComponentOpen } = useClose(false)
-
-  const [copied, copyToClipboard] = useCopyToClipboard();
 
   const matches = useMediaQuery('(min-width:1170px)');
   return (
@@ -176,8 +170,6 @@ export default function Home() {
           <Button label="Shadow Generator" />
         </a>
       </div>
-
-
     </div>
   )
 }

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import CardView from '../components/CardView'
 import './ShadowSection.css'
-import CalendarWidget from '../components/CalendarWidget';
-
+import {CalendarWidget,CardView} from './index'
 
 export default function ShadowsSection() {
 
