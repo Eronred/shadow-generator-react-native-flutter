@@ -70,8 +70,11 @@
   min-height: inherit;
   flex-grow: 2;
   min-width: 320px;
+  min-height: inherit;
   background: #16171d;
   position: relative;
+  padding:0;
+  margin:0;
 }
 
 .editor__container .code__bar .tab__bar {
@@ -90,11 +93,11 @@
   cursor: pointer;
 }
 .editor__container .code__bar .tab__bar .flutter::after {
-  content: "Soon";
+  content: "New";
   padding: 4px;
   border-radius: 8px;
   background: #46d1fd;
-  color: #fff;
+  color: #000;
   font-size: 14px;
   margin-left: 4px;
   font-weight: 500;

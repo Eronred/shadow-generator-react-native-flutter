@@ -4,8 +4,8 @@ import { Card, Slider, CopyButton } from './index'
 import { useCopyToClipboard } from '../hooks/index'
 import { RgbaColorPicker } from "react-colorful";
 import { rgba } from 'polished'
-import { rgbToHex, hexToRgbA } from '../utils/utils'
-import { DELAY, suggestedColors, componentData, codeColor } from '../utils/constants';
+import { rgbToHex, hexToRgbA, createSvgElement } from '../utils/utils'
+import { DELAY, suggestedColors, codeColor, componentData } from '../utils/constants';
 import { flexRowSpaceBetween, flexRowCentered } from '../styles/style';
 import RNSection from '../components/RNSection';
 import FlutterSection from '../components/FlutterSection';
@@ -18,26 +18,15 @@ const ShadowEditor = () => {
     const [shadowOpacity, setShadowOpacity] = useState(0.25)
     const [svgValue, setSvgValue] = useState("")
     const [shadowRadius, setShadowRadius] = useState(21)
-    const [error, setError] = useState(false)
+    const [shadowSpread, setShadowSpread] = useState(10)
     const { r, g, b, a } = shadowColor;
     const [copied, copyToClipboard] = useCopyToClipboard();
     const [selectValue, setSelectValue] = useState("Button");
     const [selectedTab, setSelectedTab] = useState(1)
 
-
-    const createSvgElement = (shadowOffsetWidth, shadowOffsetHeight, shadowRadius, r, g, b, a) => {
-        const divContainer = document.getElementById('svg-container')
-        divContainer.innerHTML = svgValue;
-        // .replace(/(width=")[^"]+(")/, '$1auto$2').replace(/(height=")[^"]+(")/, '$1auto$2');
-        const svgElement = divContainer.querySelector('svg')
-        svgElement.style.width = 'auto';
-        svgElement.style.height = 'auto';
-        svgElement.style.boxShadow = `'${shadowOffsetWidth}px ${shadowOffsetHeight}px ${shadowRadius}px ${rgba(r, g, b, a)}'`
-    }
-
     useEffect(() => {
         if (svgValue && svgValue.includes('<svg')) {
-            createSvgElement(shadowOffsetWidth, setShadowOffsetHeight, shadowRadius, r, g, b, a)
+            createSvgElement(shadowOffsetWidth, setShadowOffsetHeight, shadowRadius, r, g, b, a, svgValue)
         }
     }, [svgValue]);
 
@@ -55,10 +44,10 @@ const ShadowEditor = () => {
     const shadowCodeFlutter =
         `
         BoxShadow(
-        shadowColor:${rgbToHex(r, g, b)},
+        color:${rgbToHex(r, g, b)},
         offset: const Offset(${shadowOffsetWidth}, ${shadowOffsetHeight},),
         blurRadius: ${shadowOpacity},
-        spreadRadius: ${shadowRadius},
+        spreadRadius: ${shadowSpread},
         ),
         `
     const { key, value } = codeColor;
@@ -68,34 +57,36 @@ const ShadowEditor = () => {
         <div style={flexRowSpaceBetween}>
             <div className="editor__container">
                 <div className="sidebar">
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column'
 
-                    }} className='component__picker'>
-                        <h4>Component Menu</h4>
-                        <select
-                            onChange={(e) => setSelectValue(e.target.value)}
-                            className='component__select'
-                            name="components"
-                            id="components">
+                    <div className="slider__container">
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            marginBottom:12,
 
-                            {componentData.map((comp, index) => {
-                                return (
-                                    <option
-                                        key={index}
-                                        value={comp.name}>
-                                        {comp.name}
-                                    </option>
-                                )
-                            })}
-                        </select>
-                        {/* <input
+                        }} className='component__picker'>
+                            <h4>Component Menu</h4>
+                            <select
+                                onChange={(e) => setSelectValue(e.target.value)}
+                                className='component__select'
+                                name="components"
+                                id="components">
+
+                                {componentData.map((comp, index) => {
+                                    return (
+                                        <option
+                                            key={index}
+                                            value={comp.name}>
+                                            {comp.name}
+                                        </option>
+                                    )
+                                })}
+                            </select>
+                            {/* <input
                             value={svgValue}
                             onChange={(e) => setSvgValue(e.target.value)}
                         /> */}
-                    </div>
-                    <div className="slider__container">
+                        </div>
                         <h4>Shadow Controller</h4>
                         <div style={{
                             display: 'flex',
@@ -132,6 +123,18 @@ const ShadowEditor = () => {
                                 onChange={(e) =>
                                     setShadowRadius(e.target.value)}
                             />
+
+                            <Slider
+                                label="Spread (Flutter)"
+                                max={50}
+                                min={0}
+                                value={shadowSpread}
+                                valueLabel={shadowSpread}
+                                disabled={selectedTab === 1 ? true : false}
+                                onChange={(e) =>
+                                    setShadowSpread(e.target.value)}
+                            />
+
                         </div>
                     </div>
                     <div className="color__container">
@@ -199,7 +202,7 @@ const ShadowEditor = () => {
                         <div onClick={() => setSelectedTab(2)} className={`tab ${selectedTab === 2 ? 'tab__selected' : ''} flutter`}>
                             Flutter
                         </div>
-                        <div onClick={() => setSelectedTab(3)} className={`tab ${selectedTab === 3 ? 'tab__selected' : ''} swift`}>
+                        <div className={`tab ${selectedTab === 3 ? 'tab__selected' : ''} swift`}>
                             Swift
                         </div>
                     </div>
@@ -224,7 +227,9 @@ const ShadowEditor = () => {
                             shadowOffsetWidth={shadowOffsetWidth}
                             shadowOffsetHeight={shadowOffsetHeight}
                             shadowColor={shadowColor}
-                            shadowRadius={shadowRadius} />}
+                            shadowRadius={shadowRadius}
+                            shadowSpread={shadowSpread}
+                        />}
 
                         <CopyButton
                             onClick={() => copyToClipboard(
@@ -259,22 +264,30 @@ const ShadowEditor = () => {
                         }} id="svg-container"></div> */}
 
                         {selectValue === "Button" ? <button style={{
-                            boxShadow:
+
+                            boxShadow: selectedTab === 2 ? `${shadowOffsetWidth}px 
+                            ${shadowOffsetHeight}px 
+                            ${shadowRadius}px 
+                            ${shadowSpread}px
+                            ${rgba(r, g, b, a)}`
+                                :
                                 `${shadowOffsetWidth}px 
-                                ${shadowOffsetHeight}px 
-                                ${shadowRadius}px 
-                                ${rgba(r, g, b, a)}`,
+                            ${shadowOffsetHeight}px 
+                            ${shadowRadius}px 
+                            ${rgba(r, g, b, a)}`,
+
                         }}>Get Started</button>
                             : <Card
                                 shadowOffsetWidth={shadowOffsetWidth}
                                 shadowOffsetHeight={shadowOffsetHeight}
                                 shadowRadius={shadowRadius}
                                 shadowColor={shadowColor}
+                                shadowSpread={shadowSpread}
                             />}
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { rgba } from 'polished'
 
-export default function Card({ shadowOffsetWidth, shadowOffsetHeight, shadowRadius, shadowColor }) {
+export default function Card({ shadowOffsetWidth, shadowOffsetHeight, shadowRadius, shadowColor,shadowSpread }) {
     const { r, g, b, a } = shadowColor
     return (
         <div>
@@ -10,6 +10,7 @@ export default function Card({ shadowOffsetWidth, shadowOffsetHeight, shadowRadi
                     `${shadowOffsetWidth}px 
                     ${shadowOffsetHeight}px 
                     ${shadowRadius}px 
+                    ${shadowSpread}px
                     ${rgba(r, g, b, a)}`,
                 overflow: 'hidden'
             }}>
