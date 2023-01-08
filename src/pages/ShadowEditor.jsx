@@ -12,13 +12,13 @@ import FlutterSection from '../components/FlutterSection';
 
 
 const ShadowEditor = () => {
-    const [shadowColor, setShadowColor] = useState({ r: 0, g: 0, b: 0, a: 0.32 })
-    const [shadowOffsetWidth, setShadowOffsetWidth] = useState(7)
-    const [shadowOffsetHeight, setShadowOffsetHeight] = useState(11)
-    const [shadowOpacity, setShadowOpacity] = useState(0.25)
+    const [shadowColor, setShadowColor] = useState({ r: 0, g: 0, b: 0, a: 1 })
+    const [shadowOffsetWidth, setShadowOffsetWidth] = useState(8)
+    const [shadowOffsetHeight, setShadowOffsetHeight] = useState(8)
+    const [shadowOpacity, setShadowOpacity] = useState(0)
     const [svgValue, setSvgValue] = useState("")
-    const [shadowRadius, setShadowRadius] = useState(21)
-    const [shadowSpread, setShadowSpread] = useState(10)
+    const [shadowRadius, setShadowRadius] = useState(0)
+    const [shadowSpread, setShadowSpread] = useState(4)
     const { r, g, b, a } = shadowColor;
     const [copied, copyToClipboard] = useCopyToClipboard();
     const [selectValue, setSelectValue] = useState("Button");
@@ -44,9 +44,9 @@ const ShadowEditor = () => {
     const shadowCodeFlutter =
         `
         BoxShadow(
-        color:${rgbToHex(r, g, b)},
+        color:Colors.[${rgbToHex(r, g, b)}].withOpacity(${a}),
         offset: const Offset(${shadowOffsetWidth}, ${shadowOffsetHeight},),
-        blurRadius: ${shadowOpacity},
+        blurRadius: ${shadowRadius},
         spreadRadius: ${shadowSpread},
         ),
         `
@@ -62,7 +62,7 @@ const ShadowEditor = () => {
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            marginBottom:12,
+                            marginBottom: 12,
 
                         }} className='component__picker'>
                             <h4>Component Menu</h4>
@@ -127,7 +127,7 @@ const ShadowEditor = () => {
                             <Slider
                                 label="Spread (Flutter)"
                                 max={50}
-                                min={0}
+                                min={-10}
                                 value={shadowSpread}
                                 valueLabel={shadowSpread}
                                 disabled={selectedTab === 1 ? true : false}

@@ -40,6 +40,5 @@ export const codeColor = {
     },
     value: {
         color: '#FC8F41'
-
     }
 }
