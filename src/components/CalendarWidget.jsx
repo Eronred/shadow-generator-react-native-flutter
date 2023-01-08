@@ -7,7 +7,7 @@ export default function CalendarWidget({ name, index, day, task }) {
             <div>
                 <div className='date__wrapper'>
                     <span>{day}</span>
-                    <h2>{19 + index}</h2>
+                    <h2>{1 + index}</h2>
                 </div>
                 <div className='event__wrapper'>
                     <div style={{

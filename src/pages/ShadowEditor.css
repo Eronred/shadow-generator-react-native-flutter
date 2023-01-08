@@ -15,8 +15,8 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 12px;
-  min-height: inherit;
+  gap: 12px;  
+  min-height: 695px;
   flex-shrink: 3;
   min-width: 170px;
   background: #2b2b2b;
@@ -30,6 +30,13 @@
   font-size: 20px;
   color: #888888;
 }
+.editor__container .sidebar .component__picker .component__select {
+  padding: 6px;
+  border-radius:8px;
+  color:white;
+  background:#3f3c3c;
+  margin-top:12px;
+}
 
 .editor__container .sidebar .slider__container {
   height: 100%;
@@ -40,7 +47,6 @@
 }
 
 .editor__container .sidebar .color__container {
-  margin-top: 34px;
 }
 
 .editor__container
@@ -64,6 +70,7 @@
   min-height: inherit;
   flex-grow: 2;
   min-width: 320px;
+  min-height: 695px;
   background: #16171d;
   position: relative;
 }
@@ -84,11 +91,11 @@
   cursor: pointer;
 }
 .editor__container .code__bar .tab__bar .flutter::after {
-  content: "Soon";
+  content: "New";
   padding: 4px;
   border-radius: 8px;
   background: #46d1fd;
-  color: #fff;
+  color: #000;
   font-size: 14px;
   margin-left: 4px;
   font-weight: 500;
@@ -119,6 +126,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow:hidden;
 }
 
 .simulator__header {
@@ -166,6 +174,8 @@
   margin-top: 24px;
   box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.37);
   position: relative;
+  overflow:hidden;
+
 }
 
 .simulator__container .ios__screen .screen__top {

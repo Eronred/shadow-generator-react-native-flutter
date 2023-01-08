@@ -9,7 +9,7 @@ export default function useClose(initialIsVisible) {
             setIsComponentOpen(false);
         }
     };
-
+    
     useEffect(() => {
         document.addEventListener('click', handleClickOutside, true);
         return () => {

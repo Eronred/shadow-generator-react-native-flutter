@@ -10,7 +10,8 @@ export default function Slider({
     max,
     value,
     valueLabel,
-    onChange
+    onChange,
+    disabled
 }) {
     return (
         <div style={{
@@ -35,7 +36,9 @@ export default function Slider({
                 min={min}
                 max={max}
                 value={value}
-                onChange={onChange} />
+                onChange={onChange} 
+                disabled={disabled || false}
+                />
         </div>
     )
 }
