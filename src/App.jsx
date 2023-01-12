@@ -20,9 +20,8 @@ function App() {
         flexDirection: 'column'
       }} className="App">
       <Home />
-      <ShadowsSection/>
-      {matches ? <MacOS /> : <Popup/>}
-
+      <ShadowsSection />
+      {matches ? <MacOS /> : <Popup />}
       <Footer />
       <Analytics />
     </div>

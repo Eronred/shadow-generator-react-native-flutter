@@ -82,9 +82,18 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        <div style={{
-          fontSize: 18
-        }} className='banner'>React Native UI kit coming soon! </div>
+        <a style={{
+          fontSize: 18,
+          fontWeight: 500,
+          cursor: 'pointer',
+          textDecoration: "underline",
+          color: 'black'
+
+        }}
+          href='https://eron.gumroad.com/l/exclusive-wallpapers-pack'
+          className='banner'>
+          Download Free wallpapers (desktop & mobile) ✨💻 📱
+        </a>
         <h1 style={{
           fontSize: 68
         }}>Shadow Generator for Mobile Frameworks!</h1>

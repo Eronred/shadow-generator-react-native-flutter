@@ -159,6 +159,7 @@ div nav ul {
   overflow: hidden;
   z-index: 1;
   text-align: center;
+  
 }
 
 .header__container .banner::after {
