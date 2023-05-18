@@ -1,7 +1,18 @@
-import React from 'react'
-import '../pages/ShadowSection.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../pages/ShadowSection.css';
 
-export default function CalendarWidget({ name, index, day, task }) {
+const CalendarWidget = ({ name, index, day, task }) => {
+    const getDividerColor = () => {
+        if (day === 'Saturday') {
+            return '#FF8000';
+        } else if (day === 'Thursday') {
+            return '#0A84FF';
+        } else {
+            return '#000000';
+        }
+    };
+
     return (
         <div className={`widget__container card-${name}`}>
             <div>
@@ -10,10 +21,10 @@ export default function CalendarWidget({ name, index, day, task }) {
                     <h2>{1 + index}</h2>
                 </div>
                 <div className='event__wrapper'>
-                    <div style={{
-                        background: day === 'Saturday' ? '#FF8000'
-                            : day === 'Thursday' ? '#0A84FF' : '#000000'
-                    }} className='divider'></div>
+                    <div
+                        style={{ background: getDividerColor() }}
+                        className='divider'
+                    ></div>
                     <div className='event__detail'>
                         <h3>{task}</h3>
                         <span>5AM - 6PM</span>
@@ -21,5 +32,14 @@ export default function CalendarWidget({ name, index, day, task }) {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+CalendarWidget.propTypes = {
+    name: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    day: PropTypes.string.isRequired,
+    task: PropTypes.string.isRequired,
+};
+
+export default CalendarWidget;

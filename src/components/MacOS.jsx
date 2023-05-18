@@ -51,7 +51,7 @@ export default function MacOS() {
         {
             name: 'Eronred',
             logo: eron,
-            url: 'https://read.cv/erencan'
+            url: 'https://bento.me/erencan'
         },
 
     ]
@@ -66,7 +66,7 @@ export default function MacOS() {
                     {
                         apps.map((app, index) => {
                             return (
-                                <li>
+                                <li key={index}>
                                     <a
                                         target='_blank'
                                         key={index}

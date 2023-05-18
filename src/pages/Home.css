@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #0a84ff;
+  --secondary-color: #ff8000;
+  --tertiary-color: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +49,7 @@ div nav ul {
   line-height: 109.8%;
   margin-top: 12px;
 }
+
 .header__container p {
   font-size: 24px;
   max-width: 600px;
@@ -53,7 +60,7 @@ div nav ul {
 
 .header__container p span {
   padding: 4px;
-  background: #000;
+  background: var(--tertiary-color);
   text-align: center;
   color: #fff;
   border-radius: 12px;
@@ -65,10 +72,12 @@ div nav ul {
   background: linear-gradient(113.77deg, #61dafb 11.42%, #01b6e8 65.29%);
   color: #fff;
 }
+
 .header__container p .flutter {
   background: linear-gradient(263.25deg, #45d1fd 8.43%, #24b4ef 74.42%);
   color: #fff;
 }
+
 .header__container p .swift {
   background: linear-gradient(189.99deg, #faae42 3.05%, #ef3e31 96.98%);
   color: #fff;
@@ -159,7 +168,6 @@ div nav ul {
   overflow: hidden;
   z-index: 1;
   text-align: center;
-  
 }
 
 .header__container .banner::after {
@@ -176,13 +184,13 @@ div nav ul {
   padding: var(--border-width);
   border-radius: var(--border-radius);
   background-image: conic-gradient(
-    #488cfb,
-    #29dbbc,
+    var(--primary-color),
+    var(--secondary-color),
     #ddf505,
     #ff9f0e,
     #e440bb,
     #655adc,
-    #488cfb
+    var(--primary-color)
   );
   -webkit-mask-image: var(--m-i), var(--m-i);
   mask-image: var(--m-i), var(--m-i);
@@ -195,7 +203,7 @@ div nav ul {
   animation: rotate-hue ease-in-out 1500ms infinite;
 }
 
-&:hover::after {
+.header__container .banner:hover::after {
   animation-play-state: running;
 }
 
@@ -206,4 +214,5 @@ div nav ul {
 }
 
 @media only screen and (max-width: 600px) {
+  /* Add mobile-specific styles here */
 }
