@@ -4,7 +4,7 @@ import { rgbToHex, hexToRgbA } from '../utils/utils'
 
 export default function RNSection({ shadowOffsetWidth, shadowOffsetHeight, shadowColor, shadowRadius }) {
     const { key, value } = codeColor;
-    const { r, g, b } = shadowColor;
+    const { r, g, b, a } = shadowColor;
 
     return (
         <>
