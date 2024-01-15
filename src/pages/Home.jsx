@@ -86,13 +86,11 @@ export default function Home() {
           fontSize: 18,
           fontWeight: 500,
           cursor: 'pointer',
-          textDecoration: "underline",
           color: 'black'
-
         }}
-          href='https://eron.gumroad.com/l/exclusive-wallpapers-pack'
+          href='https://github.com/Eronred/shadow-generator-react-native-flutter'
           className='banner'>
-          Download Free wallpapers (desktop & mobile) ✨💻 📱
+          Give a star on Github 🫶
         </a>
         <h1 style={{
           fontSize: 68
