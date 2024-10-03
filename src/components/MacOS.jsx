@@ -4,11 +4,10 @@ import '../styles/MacOS.css'
 import logo from '../assets/logo.svg';
 import eron from '../assets/dock_eron_logo.svg';
 import Github from '../assets/Github.png';
-import Dribbble from '../assets/Dribbble.png';
 import Twitter from '../assets/Twitter.png';
 import Figma from '../assets/Figma.svg';
 import LinkedIn from '../assets/LinkedIn.png';
-import Instagram from '../assets/Instagram.png';
+import NicePrompt from '../assets/nice-prompt.png';
 
 export default function MacOS() {
 
@@ -19,9 +18,9 @@ export default function MacOS() {
             url: '/'
         },
         {
-            name: 'Dribbble',
-            logo: Dribbble,
-            url: 'https://dribbble.com/imeron'
+            name: 'Nice Prompt',
+            logo: NicePrompt,
+            url: '/'
         },
         {
             name: 'Twitter',
@@ -34,19 +33,9 @@ export default function MacOS() {
             url: 'https://github.com/Eronred'
         },
         {
-            name: 'Figma',
-            logo: Figma,
-            url: 'https://www.figma.com/@eren'
-        },
-        {
             name: 'LinkedIn',
             logo: LinkedIn,
             url: 'https://www.linkedin.com/in/eronred/'
-        },
-        {
-            name: 'Instagram',
-            logo: Instagram,
-            url: 'https://www.instagram.com/eronred/'
         },
         {
             name: 'Eronred',
