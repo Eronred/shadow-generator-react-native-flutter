@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 export default function Banner({ label }) {
     return (
-        <div
+        <a
+            href='https://niceprompt.app/'
+            
             style={{
-                backgroundColor: '#0A84FF',
+                backgroundColor: '#000',
                 width: '100%',
                 height: 40,
                 position: 'fixed',
@@ -20,7 +22,7 @@ export default function Banner({ label }) {
             }}
         >
             {label}
-        </div>
+        </a>
     );
 }
 

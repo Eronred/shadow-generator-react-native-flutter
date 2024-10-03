@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div style={flexColumnCentered}>
       <Banner
-        label="Follow for next tools!🎯"
+        label="Prompt Engineering here!🎯"
       />
       <NavBar />
       <div className='header__container'>
@@ -88,9 +88,9 @@ export default function Home() {
           cursor: 'pointer',
           color: 'black'
         }}
-          href='https://github.com/Eronred/shadow-generator-react-native-flutter'
+          href='https://niceprompt.app/'
           className='banner'>
-          Give a star on Github 🫶
+          Save, organize and share your prompts 🫶
         </a>
         <h1 style={{
           fontSize: 68
