@@ -20,7 +20,7 @@ export default function MacOS() {
         {
             name: 'Nice Prompt',
             logo: NicePrompt,
-            url: '/'
+            url: 'https://niceprompt.app/'
         },
         {
             name: 'Twitter',
