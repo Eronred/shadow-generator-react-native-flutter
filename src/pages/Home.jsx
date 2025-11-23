@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div style={flexColumnCentered}>
       <Banner
-        label="Prompt Engineering here!🎯"
+        label="UI library for React Native"
       />
       <NavBar />
       <div className='header__container'>
