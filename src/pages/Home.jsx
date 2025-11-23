@@ -88,9 +88,9 @@ export default function Home() {
           cursor: 'pointer',
           color: 'black'
         }}
-          href='https://niceprompt.app/'
+          href='https://reactnativecomponents.com/'
           className='banner'>
-          Save, organize and share your prompts 🫶
+          Well-designed React Native UI library
         </a>
         <h1 style={{
           fontSize: 68
