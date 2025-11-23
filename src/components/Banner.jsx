@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Banner({ label }) {
     return (
         <a
-            href='https://niceprompt.app/'
+            href='https://reactnativecomponents.com/'
             
             style={{
                 backgroundColor: '#000',
